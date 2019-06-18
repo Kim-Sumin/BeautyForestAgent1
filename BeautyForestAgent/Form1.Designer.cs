@@ -69,12 +69,14 @@
             this.btnTray.TabIndex = 2;
             this.btnTray.Text = "▼";
             this.btnTray.UseVisualStyleBackColor = true;
+            this.btnTray.Click += new System.EventHandler(this.BtnTray_Click);
             // 
             // ntficon
             // 
             this.ntficon.ContextMenuStrip = this.ctm;
             this.ntficon.Icon = ((System.Drawing.Icon)(resources.GetObject("ntficon.Icon")));
             this.ntficon.Text = "아이콘";
+            this.ntficon.DoubleClick += new System.EventHandler(this.Ntficon_DoubleClick);
             // 
             // ctm
             // 
@@ -82,19 +84,21 @@
             this.폼에보이기ToolStripMenuItem,
             this.종료ToolStripMenuItem});
             this.ctm.Name = "ctm";
-            this.ctm.Size = new System.Drawing.Size(139, 48);
+            this.ctm.Size = new System.Drawing.Size(181, 70);
             // 
             // 폼에보이기ToolStripMenuItem
             // 
             this.폼에보이기ToolStripMenuItem.Name = "폼에보이기ToolStripMenuItem";
-            this.폼에보이기ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.폼에보이기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.폼에보이기ToolStripMenuItem.Text = "폼에 보이기";
+            this.폼에보이기ToolStripMenuItem.Click += new System.EventHandler(this.폼에보이기ToolStripMenuItem_Click);
             // 
             // 종료ToolStripMenuItem
             // 
             this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -111,6 +115,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Beauty Forest Agent v0.1 by [3204] [김수민]";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ctm.ResumeLayout(false);
             this.ResumeLayout(false);
